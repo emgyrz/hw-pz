@@ -3,10 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "npm run tw:watch & vite",
+    "build": "npm run tw:build && vite build",
     "preview": "vite preview",
-    "tailwind":  "tailwindcss -i ./node_modules/tailwindcss/tailwind.css -o ./pages/tailwind.css --watch"
+    "tw:build":  "tailwindcss -i ./node_modules/tailwindcss/tailwind.css -o ./pages/tailwind.css",
+    "tw:watch":  "npm run tw:build -- --watch"
   },
   "devDependencies": {
     "sass": "^1.52.3",
