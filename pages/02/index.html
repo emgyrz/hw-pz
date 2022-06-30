@@ -19,9 +19,9 @@
   <div class="italic text-gray-400 text-sm text-center">
     Решения записывать в файлах <code>pages/02/index.js</code> и <code>pages/02/styles.scss</code>
   </div>
-  <div class="bg-gray-200 rounded mt-5 p-4 font-mono">
-<pre>
-<i class="text-gray-600">// Массив с данными, который будет использоваться далее</i>
+
+<pre><code class="rounded language-javascript">// Массив с данными, который будет использоваться далее
+
 const cars = [ {
   name: 'Девятка', price: 30500
 }, {
@@ -29,8 +29,10 @@ const cars = [ {
 }, {
   name: 'BMW', price: 23100
 } ]
+
+</code>
 </pre>
-  </div>
+
   <div>
   </div>
   <div class="rounded overflow-hidden shadow-md px-6 py-4">
@@ -38,14 +40,12 @@ const cars = [ {
     <div class="text-gray-600 text-base pl-4">
       <ul class="list-disc">
         <li>
-          <div class="bg-gray-200 rounded mt-5 p-4 font-mono">
-            <pre>
+<pre><code class="rounded language-javascript">
 const bmw = cars.find( ( car ) => {
   return car === { name: 'BMW', price: 23100 }
 } )
-bmw <i class="text-gray-400">// undefined</i>
-            </pre>
-          </div>
+console.log( bmw ) <i class="text-gray-400">// undefined</i>
+</code></pre>
 
           Почему <code>bmw</code> будет равно <code>undefined</code>?
           Как найти в массиве <code>cars</code> объект BMW?
@@ -54,7 +54,8 @@ bmw <i class="text-gray-400">// undefined</i>
           В файле <code>./index.js</code> имеется класс <code>MyBestAwesomeArrayEver</code>.
           Необходимо реализовать у него метод <code>find</code>,
           делающий то же самое, что и одноимённый метод массивов
-          - <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/find">.find</a>.
+          - <a target="_blank" class="font-mono underline text-blue-500"
+               href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/find">.find</a>.
         </li>
       </ul>
     </div>
@@ -67,22 +68,26 @@ bmw <i class="text-gray-400">// undefined</i>
         <li>
           Необходимо убедиться, что в массиве <code>cars</code> хотя бы одна машина дороже тридцати тысяч.
           Использовать
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some">.some</a>.
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some">.some</a>.
         </li>
         <li>
           Необходимо убедиться, что в массиве <code>cars</code> ни одна машина не дороже пятидесяти тысяч.
           Использовать
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some">.some</a>
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some">.some</a>
         </li>
         <li>
           Необходимо убедиться, что в массиве <code>cars</code> ни одна машина не дороже пятидесяти тысяч.
           Использовать
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every">.every</a>
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every">.every</a>
         </li>
         <li>
           Необходимо убедиться, что в массиве <code>cars</code> у каждой машины есть название.
           Использовать
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every">.every</a>
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every">.every</a>
         </li>
         <li>
           В файле <code>./index.js</code> у класса <code>MyBestAwesomeArrayEver</code>
@@ -93,7 +98,6 @@ bmw <i class="text-gray-400">// undefined</i>
   </div>
 
 
-
   <div class="rounded overflow-hidden shadow-md px-6 py-4">
     <div class="font-bold text-xl mb-2">- 3 -</div>
     <div class="text-gray-600 text-base pl-4">
@@ -101,10 +105,12 @@ bmw <i class="text-gray-400">// undefined</i>
         <li>
           Необходимо проверить, есть ли в массиве <code>cars</code> хотя бы одна машина с ценой в 27700.
           Использовать метод
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map">.map</a>
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map">.map</a>
           для преобразования массива объектов в массив чисел.
           Далее использовать метод
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">Array.includes</a>.
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes">Array.includes</a>.
         </li>
         <li>
           Как реализовать удобнее задачу из предыдущего пункта?
@@ -112,9 +118,11 @@ bmw <i class="text-gray-400">// undefined</i>
         <li>
           Найти в массиве <code>cars</code> машину, в названии которой имеются цифры "12".
           Использовать
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.find</a>
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/find">Array.find</a>
           и
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes">String.includes</a>
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/includes">String.includes</a>
         </li>
       </ul>
     </div>
@@ -127,7 +135,8 @@ bmw <i class="text-gray-400">// undefined</i>
       <ul class="list-disc">
         <li>
           Определить цену за все автомобили из списка. Использовать
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">.reduce</a>
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce">.reduce</a>
         </li>
         <li>
           Написать свою упрощённую реализацию метода <code>reduce</code>,
@@ -140,14 +149,14 @@ bmw <i class="text-gray-400">// undefined</i>
   </div>
 
 
-
   <div class="rounded overflow-hidden shadow-md px-6 py-4">
     <div class="font-bold text-xl mb-2">- 5 -</div>
     <div class="text-gray-600 text-base pl-4">
       <ul class="list-disc">
         <li>
           Отсортировать машины по возрастанию цены. Использовать
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">.sort</a>
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">.sort</a>
         </li>
       </ul>
     </div>
@@ -160,14 +169,33 @@ bmw <i class="text-gray-400">// undefined</i>
         <li>
           Удалить из списка первую попавшуюся машину, в названии которой есть буква "в".
           Использовать
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex">.findIndex</a>
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex">.findIndex</a>
           и
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">.splice</a>
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/splice">.splice</a>
         </li>
         <li>
           Попробовать найти ещё машину, в названии которой есть "в". Если такая найдётся, поместить её в конец списка.
           Использовать
-          <a target="_blank" class="font-mono underline text-blue-500" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex">.findIndex</a>
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex">.findIndex</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="rounded overflow-hidden shadow-md px-6 py-4">
+    <div class="font-bold text-xl mb-2">- 7 -</div>
+    <div class="text-gray-600 text-base pl-4">
+      <ul class="list-disc">
+        <li>
+          Глянуть pull request
+          <a target="_blank" class="font-mono underline text-blue-500"
+             href="https://github.com/petrzavadski/jsbasic-20220310_petrzavadski/pulls">
+            https://github.com/petrzavadski/jsbasic-20220310_petrzavadski/pulls
+          </a>
         </li>
       </ul>
     </div>
@@ -175,5 +203,6 @@ bmw <i class="text-gray-400">// undefined</i>
 
 </main>
 <script src="./index.js"></script>
+<script type="module" src="../hl.js"></script>
 </body>
 </html>
