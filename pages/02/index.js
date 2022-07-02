@@ -32,24 +32,19 @@ return;
 }
 
 
-  reduce( predicate ){ { /***   - 4 -   ***/ }
-// Почти решил
-//
-// let car = new MyBestAwesomeArrayEver(cars);
-// console.log(car.reduce((acum,elem)=>{return acum + elem.price}))
-// Output: (acum,elem)=>{return acum + elem.price}0305002770023100 
-// ??????
+reduce( predicate ){ { /***   - 4 -   ***/ }
 
-  let value = arguments[0];
+let value = arguments[0];
 
-                     
-  for (let i=0; i < this.data.length; i++) {
+                   
+for (let i=0; i < this.data.length; i++) {
 
-value = predicate(value, this.data[i]);
+  if (!(isFinite(value))) {value = predicate(0, this.data[i])} else {
+value = predicate(value, this.data[i]);}
 
-    }
+  }
 
-            return value;
+          return value;
 
 }
 }
