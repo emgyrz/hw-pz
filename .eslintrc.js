@@ -1,0 +1,145 @@
+module.exports = {
+    'root': true,
+    "parserOptions": {
+      'ecmaVersion': 12,
+      'sourceType': 'module'
+  },
+
+    "env": {
+      'browser': true,
+      'es2021': true,
+      'node': true
+    },
+    // 'extends': 'eslint:recommended',
+    'overrides': [
+      /**
+       * -----------------------------------------------------
+       * TYPESCRIPT FILES (COMPONENTS, SERVICES ETC) (.ts)
+       * -----------------------------------------------------
+       */
+      {
+        'files': [ '*.js' ],
+        plugins: [
+        ],
+
+        'rules': {
+
+          //
+          //
+          //
+          //
+          //
+          'array-bracket-spacing': [ 1, 'always' ],
+          'block-spacing': 1,
+          'brace-style': 1,
+          'comma-spacing': [ 2, { before: false, after: true } ],
+          'space-in-parens': [ 1, 'always' ],
+          'max-lines': 2,
+          'max-params': 2,
+          'no-tabs': 2,
+          'no-whitespace-before-property': 2,
+          'keyword-spacing': 1,
+          'space-before-blocks': 1,
+          'object-curly-spacing': [ 1, 'always' ],
+          'no-multiple-empty-lines': [ 2, { max: 7 } ],
+          'computed-property-spacing': [ 1, 'always' ],
+          'arrow-body-style': 'error',
+          'curly': 0,
+          'eol-last': 'error',
+
+
+          //
+          //
+          //
+          //
+          //
+          'no-param-reassign': [ 2, { props: false } ],
+          'complexity': 'off',
+          'constructor-super': 'error',
+          'eqeqeq': [
+            'error',
+            'smart'
+          ],
+          'guard-for-in': 'error',
+          'id-blacklist': [
+            'error',
+            'any',
+            'Number',
+            'number',
+            'String',
+            'string',
+            'Boolean',
+            'boolean',
+            'Undefined',
+            'undefined'
+          ],
+          'id-match': 'error',
+          'max-classes-per-file': 'off',
+          'max-len': [
+            'error',
+            {
+              'code': 108
+            }
+          ],
+          'new-parens': 'error',
+          'no-bitwise': 'error',
+          'no-caller': 'error',
+          'no-cond-assign': 'error',
+
+          'no-eval': 'error',
+          'no-invalid-this': 'off',
+          'no-new-wrappers': 'error',
+          'no-shadow': [
+            'error',
+            {
+              'hoist': 'all'
+            }
+          ],
+          'no-throw-literal': 'error',
+          'no-trailing-spaces': 1,
+          'no-undef-init': 'error',
+          'no-underscore-dangle': 'error',
+          'no-unsafe-finally': 'error',
+          'no-unused-labels': 'error',
+          'no-var': 'error',
+          'object-shorthand': 'error',
+          'one-var': [
+            'error',
+            'never'
+          ],
+          'prefer-const': 'error',
+          'radix': 'error',
+          'space-before-function-paren': [
+            'error',
+            {
+              'anonymous': 'never',
+              'asyncArrow': 'always',
+              'named': 'never'
+            }
+          ],
+          'spaced-comment': [
+            'error',
+            'always',
+            {
+              'markers': [
+                '/'
+              ]
+            }
+          ],
+          'use-isnan': 'error',
+          'valid-typeof': 'off',
+
+        }
+      },
+
+      /**
+       * -----------------------------------------------------
+       * COMPONENT TEMPLATES
+       * -----------------------------------------------------
+       *
+       * If you use inline templates, make sure you read the notes on the configuration
+       * object after this one to understand how they relate to this configuration directly
+       * below.
+       */
+    ]
+  }
