@@ -24,9 +24,7 @@ class MyBestAwesomeArrayEver extends Array {
     { /** *   - 2 -   ***/ }
 
     for ( let i = 0; this.length; i++ ) {
-
       if ( this[ i ] === true ) return true
-
     }
 
     return

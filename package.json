@@ -7,7 +7,9 @@
     "build": "npm run tw:build && vite build",
     "preview": "vite preview",
     "tw:build": "tailwindcss -i ./node_modules/tailwindcss/tailwind.css -o ./pages/tailwind.css",
-    "tw:watch": "npm run tw:build -- --watch"
+    "tw:watch": "npm run tw:build -- --watch",
+    "lint": "eslint ./pages --ext .js --fix",
+    "lint:strict": "eslint ./pages --ext .js --max-warnings 0"
   },
   "devDependencies": {
     "eslint": "8.19.0",
@@ -16,6 +18,6 @@
     "vite": "2.9.9"
   },
   "dependencies": {
-    "highlight.js": "^11.5.1"
+    "highlight.js": "11.5.1"
   }
 }
