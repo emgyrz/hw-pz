@@ -20,6 +20,17 @@ class MyBestAwesomeArrayEver extends Array {
 
   }
 
+  /**
+   * @@@@@@@ CMT @@@@@@@
+   * не вызывается predicate
+   *
+   * для всех массивов, где нет true внутри, вернёт undefined
+   *
+   * не возвращается false
+   *
+   * не используется .find
+   *
+   */
   some( predicate ) {
     { /** *   - 2 -   ***/ }
 
@@ -31,6 +42,14 @@ class MyBestAwesomeArrayEver extends Array {
   }
 
 
+  /**
+   * @@@@@@@ CMT @@@@@@@
+   * почему isFinite? reduce может работать не только с числами,
+   * давай для простоты тестирования добавим ещё второй аргумент в reduce - initialValue
+   *
+   * остальное 👍
+   *
+   */
   reduce( predicate ) {
     { /** *   - 4 -   ***/ }
 
@@ -67,14 +86,31 @@ console.log( car2.find( ( car ) => car.name === 'BMW' ) )
 console.log( cars.some( ( car ) => car.price > 30000 ) )
 
 // Решение 2.2
+/**
+ * @@@@@@@ CMT @@@@@@@
+ * Необходимо убедиться, что в массиве cars **НИ** одна машина **НЕ** дороже пятидесяти тысяч.
+ */
 console.log( cars.some( ( car ) => car.price > 50000 ) )
 
 // Решение 2.3
+/**
+ * @@@@@@@ CMT @@@@@@@
+ * Необходимо убедиться, что в массиве cars ни одна машина **НЕ** дороже пятидесяти тысяч
+ */
 console.log( cars.every( ( car ) => car.price > 50000 ) )
 
 // Решение 2.4
 console.log( cars.every(
+  /**
+   * @@@@@@@ CMT @@@@@@@
+   * или
+   * ( car ) => typeof car.name === string && car.name !== ''
+   *
+   * или
+   * ( { name } ) => typeof name === string && name !== ''
+   */
   ( car ) => car.hasOwnProperty( 'name' ) && ( car.name !== undefined ) && ( car.name !== '' ) )
+
 )
 // <------------------------ 3 ------------------------------->
 
@@ -82,6 +118,10 @@ console.log( cars.every(
 console.log( cars.map( ( elem ) => elem.price ).includes( 27700 ) )
 
 // Решение 3.2
+/**
+ * @@@@@@@ CMT @@@@@@@
+ * ещё можно использовать .some, который сразу возвращает boolean
+ */
 console.log( !!cars.find( ( elem ) => elem.price === 27700 ) )
 
 // Решение 3.3
@@ -92,7 +132,6 @@ console.log( cars.find( ( elem ) => elem.name.includes( '12' ) ).name )
 console.log( cars.reduce( ( acum, elem ) => acum + elem.price, 0 ) )
 
 // Решение 4.2
-
 
 // <------------------------ 5 ------------------------------->
 console.log( cars.sort( ( elem1, elem2 ) => elem1.price - elem2.price ) )
