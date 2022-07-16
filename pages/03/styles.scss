@@ -1,0 +1,19 @@
+.chess_board {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  i, b {
+    display: block;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+  }
+  i {
+    background: #333333;
+  }
+  b {
+    background: lightyellow;
+  }
+}
