@@ -15,7 +15,7 @@ class MyBestAwesomeArrayEver extends Array {
 
     for ( let i = 0;this.length;i++ ) {
       const result = this[ i ]
-      if ( predicate( result ) === true ) return result
+      if ( predicate( result ) === true ) return resultcar
     }
 
   }
@@ -31,15 +31,36 @@ class MyBestAwesomeArrayEver extends Array {
    * не используется .find
    *
    */
+
+  // вариант №1 (по условию)
   some( predicate ) {
     { /** *   - 2 -   ***/ }
 
-    for ( let i = 0; this.length; i++ ) {
-      if ( this[ i ] === true ) return true
+    return !!Object(this).find(predicate)
+
+  }
+
+// варинат №2 
+    some2( predicate ) {
+
+    { /** *   - 2 -   ***/ }
+
+    let data = Object(this);
+
+    for ( let i = 0; i < this.length; i++ ) {
+
+      if ( predicate(data[ i ]) === true ) return true
+
     }
 
-    return
+    return false
+
   }
+
+  // solution :
+  // 
+//   const car2 = MyBestAwesomeArrayEver.from( cars )
+// console.log( cars.some( ( car ) => car.price > 30000 ) )
 
 
   /**
@@ -53,19 +74,44 @@ class MyBestAwesomeArrayEver extends Array {
   reduce( predicate ) {
     { /** *   - 4 -   ***/ }
 
-    let value = arguments[ 0 ]
+    // вариант №1
+    // let value = arguments[ 0 ]
 
-    for ( let i = 0; i < this.length; i++ ) {
+    // for ( let i = 0; i < this.length; i++ ) {
 
-      if ( !( isFinite( value ) ) ) {
-        value = predicate( 0, this[ i ] )
-      } else {
-        value = predicate( value, this[ i ] )
+    //   if ( !( isFinite( value ) ) ) {
+    //     value = predicate( 0, this[ i ] )
+    //   } else {
+    //     value = predicate( value, this[ i ] )
+    //   }
+
+    // }
+
+    // return value
+
+    // вариант №2
+
+
+      reduce( predicate, initialValue ) {
+        { /** *   - 4 -   ***/ }
+    
+        let value = initialValue
+    
+        for ( let i = 0; i < this.length; i++ ) {
+    
+             value = predicate( value, this[ i ] )
+          
+    
+        }
+    
+        return value
+    
       }
+    
+    //  Output:
+    // const car = MyBestAwesomeArrayEver.from( cars )
+    // console.log( car.reduce( ( acum, elem ) => acum + elem.price, 0 ) )
 
-    }
-
-    return value
 
   }
 }
@@ -90,14 +136,19 @@ console.log( cars.some( ( car ) => car.price > 30000 ) )
  * @@@@@@@ CMT @@@@@@@
  * Необходимо убедиться, что в массиве cars **НИ** одна машина **НЕ** дороже пятидесяти тысяч.
  */
-console.log( cars.some( ( car ) => car.price > 50000 ) )
+
+// 1 вариант
+console.log(cars.some( ( car ) => car.price > 50000 ) ? 'Есть дороже': 'Ни одна машина не дороже 50к')
+
+// 2 вариант
+  console.log(cars.some( ( car ) => !(car.price > 50000 )))
 
 // Решение 2.3
 /**
  * @@@@@@@ CMT @@@@@@@
  * Необходимо убедиться, что в массиве cars ни одна машина **НЕ** дороже пятидесяти тысяч
  */
-console.log( cars.every( ( car ) => car.price > 50000 ) )
+ console.log(cars.every( ( car ) => car.price > 50000 ) ? 'Есть дороже': 'Ни одна машина не дороже 50к')
 
 // Решение 2.4
 console.log( cars.every(
@@ -166,3 +217,4 @@ cars.splice( ( () => cars.findIndex( ( elem ) => elem.name.includes( 'в' ) ) )(
 
 transmit( cars, v( cars ) )
 console.log( cars )
+
