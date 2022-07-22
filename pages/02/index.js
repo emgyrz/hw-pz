@@ -36,20 +36,20 @@ class MyBestAwesomeArrayEver extends Array {
   some( predicate ) {
     { /** *   - 2 -   ***/ }
 
-    return !!Object(this).find(predicate)
+    return !!Object( this ).find( predicate )
 
   }
 
-// варинат №2 
-    some2( predicate ) {
+  // варинат №2
+  some2( predicate ) {
 
     { /** *   - 2 -   ***/ }
 
-    let data = Object(this);
+    const data = Object( this )
 
     for ( let i = 0; i < this.length; i++ ) {
 
-      if ( predicate(data[ i ]) === true ) return true
+      if ( predicate( data[ i ] ) === true ) return true
 
     }
 
@@ -58,9 +58,9 @@ class MyBestAwesomeArrayEver extends Array {
   }
 
   // solution :
-  // 
-//   const car2 = MyBestAwesomeArrayEver.from( cars )
-// console.log( cars.some( ( car ) => car.price > 30000 ) )
+  //
+  //   const car2 = MyBestAwesomeArrayEver.from( cars )
+  // console.log( cars.some( ( car ) => car.price > 30000 ) )
 
 
   /**
@@ -92,22 +92,22 @@ class MyBestAwesomeArrayEver extends Array {
     // вариант №2
 
 
-      reduce( predicate, initialValue ) {
-        { /** *   - 4 -   ***/ }
-    
-        let value = initialValue
-    
-        for ( let i = 0; i < this.length; i++ ) {
-    
-             value = predicate( value, this[ i ] )
-          
-    
-        }
-    
-        return value
-    
-      }
-    
+    // reduce( predicate, initialValue ) {
+    { /** *   - 4 -   ***/ }
+
+    let value = initialValue
+
+    for ( let i = 0; i < this.length; i++ ) {
+
+      value = predicate( value, this[ i ] )
+
+
+    }
+
+    return value
+
+    // }
+
     //  Output:
     // const car = MyBestAwesomeArrayEver.from( cars )
     // console.log( car.reduce( ( acum, elem ) => acum + elem.price, 0 ) )
@@ -138,17 +138,17 @@ console.log( cars.some( ( car ) => car.price > 30000 ) )
  */
 
 // 1 вариант
-console.log(cars.some( ( car ) => car.price > 50000 ) ? 'Есть дороже': 'Ни одна машина не дороже 50к')
+console.log( cars.some( ( car ) => car.price > 50000 ) ? 'Есть дороже' : 'Ни одна машина не дороже 50к' )
 
 // 2 вариант
-  console.log(cars.some( ( car ) => !(car.price > 50000 )))
+console.log( cars.some( ( car ) => !( car.price > 50000 ) ) )
 
 // Решение 2.3
 /**
  * @@@@@@@ CMT @@@@@@@
  * Необходимо убедиться, что в массиве cars ни одна машина **НЕ** дороже пятидесяти тысяч
  */
- console.log(cars.every( ( car ) => car.price > 50000 ) ? 'Есть дороже': 'Ни одна машина не дороже 50к')
+console.log( cars.every( ( car ) => car.price > 50000 ) ? 'Есть дороже' : 'Ни одна машина не дороже 50к' )
 
 // Решение 2.4
 console.log( cars.every(
