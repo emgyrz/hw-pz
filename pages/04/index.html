@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>04</title>
+  <link rel="stylesheet" href="../tailwind.css">
+  <link rel="stylesheet" href="styles.scss">
+</head>
+<body>
+<div class="px-24 py-4 mx-auto bg-violet-900 text-violet-50">
+  <a class=" float-left underline" href="../..">🠔 Назад к списку заданий</a>
+  <h1 class="text-xl text-center">№ 4</h1>
+</div>
+
+<main class="container px-4 py-9 mx-auto mt-20 max-w-3xl space-y-20">
+
+  <div class="rounded overflow-hidden shadow-md px-6 py-4">
+    <div class="font-bold text-xl mb-2">- 1 -</div>
+    <div class="text-gray-600 text-base pl-4">
+      <ul class="list-disc">
+        <li>
+<pre><code class="rounded language-javascript">
+const _instanceProto = { c: 'c', d: 'd' }
+function InstanceCreator() {
+  this.a = 'a'
+  this.b = 'b'
+}
+InstanceCreator.prototype = _instanceProto
+
+const instance = new InstanceCreator()
+
+for ( const key in instance ) {
+  // вывести в консоль a, b, c, d
+}
+
+for ( const key in instance ) {
+  // вывести в консоль a, b
+}
+
+for ( const key in instance ) {
+  // вывести в консоль c, d
+}
+
+</code></pre>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="rounded overflow-hidden shadow-md px-6 py-4">
+    <div class="font-bold text-xl mb-2">- 2 -</div>
+    <div class="text-gray-600 text-base pl-4">
+      <ul class="list-disc">
+        <li>
+          Имеется структура "дерево" вида
+<pre><code class="rounded language-javascript">
+             ____ 0 ____
+           /             \
+       _ 3 _             _ 5 _
+      /  |  \          /   |   \
+    11   13  17      15    19   10
+        /   /  \      \          |
+      26   23   29     22        27
+                /
+               33
+</code></pre>
+          <p><i>см. <code>./index.js</code></i></p>
+          Состоит из "веток" (<code>TreeNode</code>) и "листьев" (<code>TreeLeaf</code>),
+          которые могут быть на этих ветках. "Ветки" также могут быть на "ветках".
+        </li>
+        <li>
+          Необходимо написать реализацию функций <code>logToDepth</code> и <code>logFromDepth</code>.
+          Обе просто выводят тип элемента дерева (<code>node</code> или <code>leaf</code>) и его индекс (свойство <code>.x</code>).
+          Первая функция выводит элементы "в глубину", т.е. начиная с самого верхнего вниз.
+          Вторая - наоборот, от сначала выводит в консоль нижние элементы, после, поднимаясь, верхние.
+        </li>
+        <li>
+          Результаты выполнения обоих функций:
+          <br>
+          <img src="./img/0.png" alt="" class="inline-block">
+          <img src="./img/1.png" alt="" class="inline-block">
+        </li>
+        <li>
+          Для обхода внутренних элементов TreeNode необходимо использовать <code>for ... of</code>
+        </li>
+        <li>
+          В файле <code>./index.js</code> у класса <code>MyBestAwesomeArrayEver</code>
+          реализовать метод <code>some</code> на основе реализованного в первом задании метода <code>find</code>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</main>
+<script src="./index.js"></script>
+<script type="module" src="../hl.js"></script>
+</body>
+</html>
