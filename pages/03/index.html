@@ -5,26 +5,118 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>01</title>
+    <title>03</title>
     <link rel="stylesheet" href="../tailwind.css">
     <link rel="stylesheet" href="styles.scss">
 </head>
 <body>
-<div class="px-24 py-9 mx-auto bg-amber-600" >
-    <a class="text-amber-900 underline" href="../..">🠔 Назад к списку заданий</a>
-    <br><br>
-    <!--  <h1 class="text-xl text-yellow-100"></h1>-->
-    <ul class="list-decimal px-10 text-xl text-yellow-100 space-y-3">
-        <li></li>
-        <li></li>
-    </ul>
+
+<div class="px-24 py-4 mx-auto bg-violet-900 text-violet-50">
+  <a class=" float-left underline" href="../..">🠔 Назад к списку заданий</a>
+  <h1 class="text-xl text-center">№ 3</h1>
 </div>
 
+<main class="container px-4 py-9 mx-auto mt-20 max-w-3xl space-y-20">
+
+  <div class="rounded overflow-hidden shadow-md px-6 py-4">
+    <div class="font-bold text-xl mb-2">- 1 -</div>
+    <div class="text-gray-600 text-base pl-4">
+      <p>
+        Имеется такая вёрстка:
+        выбираемый список стран (<code>id: countries</code>),
+        выбираемый список животных (<code>id: animals</code>),
+        результат выбора (<code>id: animal_selecting_result</code>)
+      </p>
+
+      <div class="rounded bg-yellow-200 p-4 mt-3">
+        <label for="countries" class="text-sm">Выберите страну животных</label>
+        <select name="countries" id="countries" class="">
+          <option selected value="null">Выберите страну</option>
+          <option value="asia">АзиЯ</option>
+          <option value="australia">Австралия</option>
+          <option value="africa">Африка</option>
+        </select>
+        <br>
+        <label for="animals" class="text-sm">Выберите животное</label>
+        <select name="animals" id="animals">
+          <option selected value="null">Выберите животное</option>
+          <option value="kangaroo">Кенгуру</option>
+          <option value="koala">Коала</option>
+        </select>
+        <br>
+        <div id="animal_selecting_result" class="text-sm bg-red-300 mt-2 p-2">
+          Ничего не выбрано
+        </div>
+      </div>
+
+      <ul class="list-disc mt-4">
+        <li>
+          Данные находятся в файле <code>./01.js</code>.
+          Работу производить там же
+        </li>
+        <li>
+          Необходимо, когда пользователь выберет страну, перерисовывать животных, которых можно выбрать.
+          При смене страны в списке животных отображать: <i>Выберите животное</i>
+        </li>
+        <li>
+          Когда пользователь выберет животное, в результате отображать какую страну и животное он выбрал
+        </li>
+        <li>
+          До момента, когда всё выбрано, в результате отображать единственная строка <i>Ничего не выбрано</i>
+        </li>
+        <li>
+          Когда пользователь отвыбирает страну, т.е. выбирает пункт: <i>Выберите страну</i>,
+          нужно сбрасывать выбор животного, т.е. выбирать null,
+          так же изменять в необходимый вид результат
+        </li>
+        <li>
+          Когда ничего не выбрано результат должен отображаться с красным фоном,
+          иначе с зелёным. В первом случае нужно добавить класс <code>bg-red-300</code>.
+          Во втором - <code>bg-lime-300</code>
+        </li>
+        <li>
+          как выглядит, когда всё выбрано
+          <br>
+            <img width="330" class="inline-block "  src="./img/success.png">
+            <img width="330" class="inline-block"  src="./img/success_html.png">
+        </li>
+        <li>
+          когда не выбрано:
+          <br>
+          <img width="330" class="inline-block "  src="./img/not_select.png">
+        </li>
+      </ul>
+    </div>
+  </div>
 
 
-<main class="container px-4 py-9 mx-auto mt-20">
+  <div class="rounded overflow-hidden shadow-md px-6 py-4">
+    <div class="font-bold text-xl mb-2">- 2 -</div>
+    <div class="text-gray-600 text-base pl-4">
+      <p>
+        Имеется следующая вёрстка:
+        8 тёмных блоков <code>(тэг i)</code>
+        и 8 светлых <code>(тэг b)</code>
+      </p>
+      <div id="chess_board" class="chess_board">
+        <i></i><b></b><b></b><i></i><b></b><i></i><i></i><b></b><b></b><i></i><b></b><b></b><i></i><i></i><b></b><i></i>
+      </div>
+      <ul class="list-disc">
+        <li>
+          Необходимо не удаляя элементы и не создавая новые, перетасовать их так,
+          чтобы получилась шахматная доска
+        </li>
+        <li>
+          Для этого задания есть файл <code>./02.js</code>
+        </li>
+      </ul>
+    </div>
+  </div>
 
 </main>
 <script src="./index.js"></script>
+<script src="./01.js"></script>
+<script src="./02.js"></script>
+
 </body>
 </html>
