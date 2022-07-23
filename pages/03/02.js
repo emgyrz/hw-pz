@@ -64,17 +64,6 @@ function decision( num ) {
 
 const CB = [ 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1 ]
 
-// l( check( 2 ) )
-
-// const one = chessBoardEl.children[ 0 ]
-// const two = chessBoardEl.children[ 1 ]
-// const three = chessBoardEl.children[ 2 ]
-// const four = chessBoardEl.children[ 3 ]
-
-// // shiftRight( one, two )
-// shiftLeft( four, three )
-// // two = one
-
 // логика
 
 // 1 проход уверено делает
