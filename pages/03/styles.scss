@@ -4,16 +4,28 @@
   flex-wrap: wrap;
 
 
-  i, b {
+  i,
+  b {
     display: block;
     width: 100px;
     height: 100px;
     box-sizing: border-box;
   }
+
   i {
     background: #333333;
   }
+
   b {
     background: lightyellow;
   }
+}
+
+.bg-red-300 {
+  background-color: red;
+}
+
+.bg-lime-300 {
+  background-color: lime;
+
 }
