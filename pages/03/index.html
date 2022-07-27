@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>03</title>
-    <link rel="stylesheet" href="../tailwind.css">
-    <link rel="stylesheet" href="styles.scss">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>03</title>
+  <link rel="stylesheet" href="../tailwind.css">
+  <link rel="stylesheet" href="styles.scss">
 </head>
 <body>
 
@@ -77,13 +77,13 @@
         <li>
           как выглядит, когда всё выбрано
           <br>
-            <img width="330" class="inline-block "  src="./img/success.png">
-            <img width="330" class="inline-block"  src="./img/success_html.png">
+          <img width="330" class="inline-block " src="./img/success.png">
+          <img width="330" class="inline-block" src="./img/success_html.png">
         </li>
         <li>
           когда не выбрано:
           <br>
-          <img width="330" class="inline-block "  src="./img/not_select.png">
+          <img width="330" class="inline-block " src="./img/not_select.png">
         </li>
       </ul>
     </div>
@@ -117,8 +117,48 @@
   <div class="rounded overflow-hidden shadow-md px-6 py-4">
     <div class="font-bold text-xl mb-2">- 2.1 -</div>
     <div class="text-gray-600 text-base pl-4">
-      <div id="chess_board2_1" class="chess_board">
-        <i></i><b></b><b></b><i></i><b></b><i></i><i></i><b></b><b></b><i></i><b></b><b></b><i></i><i></i><b></b><i></i>
+
+      <div class="boardWrp"><i>4x4</i>
+        <button
+          class="relative text-xs inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white ">
+          <span
+            class="relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              sort
+          </span>
+        </button>
+        <div class="chess_board mb-10">
+          <i></i><b></b><b></b><i></i><b></b><i></i><i></i><b></b><b></b><i></i><b></b><b></b><i></i><i></i><b></b><i></i>
+        </div>
+      </div>
+
+
+      <div class="boardWrp"><i>7x7</i>
+        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 text-xs">
+          <span class="relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              sort
+          </span>
+        </button>
+        <div class="chess_board min-7 mb-10">
+          <i></i><b></b><b></b><i></i><b></b><i></i><i></i><b></b><b></b><i></i><b></b><b></b><i></i><i></i><b></b><i></i>
+          <i></i><b></b><b></b><i></i><b></b><i></i><i></i><b></b><b></b><i></i><b></b><b></b><i></i><i></i><b></b><i></i>
+          <i></i><i></i><b></b><b></b><i></i><i></i><b></b><b></b><i></i><i></i><b></b><b></b><i></i><i></i><b></b><b></b>
+          <i></i>
+        </div>
+      </div>
+
+
+      <div class="boardWrp"><i>8x8</i>
+        <button class="text-xs relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900">
+          <span class="relative px-5 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              sort
+          </span>
+        </button>
+        <div class="chess_board min-8 mb-10">
+          <b></b><i></i><b></b><i></i><b></b><i></i><i></i><b></b><b></b><i></i><b></b><b></b><i></i><i></i><b></b><i></i>
+          <i></i><b></b><b></b><i></i><b></b><i></i><i></i><b></b><b></b><i></i><b></b><b></b><i></i><i></i><b></b><i></i>
+          <i></i><i></i><b></b><b></b><i></i><i></i><b></b><b></b><i></i><i></i><b></b><b></b><i></i><i></i><b></b><b></b>
+          <i></i><i></i><b></b><b></b><i></i><i></i><b></b><b></b><i></i><i></i><b></b><b></b><i></i><i></i><b></b><b></b>
+        </div>
       </div>
 
     </div>

@@ -1,10 +1,7 @@
 
 const countriesList = {
   africa: {
-<<<<<<< HEAD
-=======
     trs: 'Африка',
->>>>>>> pz/master
     animals: [ {
       name: 'crocodile',
       trs: 'Крокодил'
@@ -17,10 +14,7 @@ const countriesList = {
     } ]
   },
   australia: {
-<<<<<<< HEAD
-=======
     trs: 'Австралия',
->>>>>>> pz/master
     animals: [ {
       name: 'kangaroo',
       trs: 'Кенгуру'
@@ -30,28 +24,19 @@ const countriesList = {
     } ]
   },
   asia: {
-<<<<<<< HEAD
-=======
     trs: 'АзиЯ',
->>>>>>> pz/master
     animals: [ {
       name: 'tiger',
       trs: 'Тигр'
     }, {
       name: 'panda',
-<<<<<<< HEAD
-      trs: 'Panda'
-=======
       trs: 'Панда'
->>>>>>> pz/master
     }, {
       name: 'elephant',
       trs: 'Слон'
     } ]
   }
 }
-<<<<<<< HEAD
-=======
 
 const redGreen = {
   contry: false,
@@ -177,4 +162,3 @@ animals.addEventListener( 'change', ( event ) => {
   }
 
 } )
->>>>>>> pz/master
