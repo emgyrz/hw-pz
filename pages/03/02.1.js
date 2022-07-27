@@ -88,8 +88,6 @@ class ChessBoardNormalizer {
 //
 
 
-
-
-Array.prototype.slice.call( document.querySelectorAll( '.boardWrp > button' ) ).forEach( ( btn ) => {
+for ( const btn of document.querySelectorAll( '.boardWrp > button' ) ) {
   btn.onclick = ( ev ) => new ChessBoardNormalizer( ev.currentTarget.parentElement.lastElementChild ).run()
-} )
+}
